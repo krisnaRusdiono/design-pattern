@@ -1,5 +1,11 @@
-// Creation Design Pattern
-// Example of Singleton
+// Creation Design Pattern of Singleton
+/*
+Definition
+
+Singleton is a design pattern that ensures that a class has only one immutable instance.
+*/
+
+// Example of Singleton on Object
 const DefaultObj: Record<string, unknown> = {
     name: 'John Doe',
     greet: function () {
@@ -7,6 +13,11 @@ const DefaultObj: Record<string, unknown> = {
     },
 }
 
+const FreezedObj = Object.freeze(DefaultObj);
+// FreezedObj.name = 'Error';
+
+// ===============================================================================
+// Example of Singleton on Class
 class DefaultClass {
     constructor() {}
 
@@ -16,12 +27,6 @@ class DefaultClass {
     }
 }
 
-// Use freeze to avoid Config being changed
-// Object Example
-// const FreezedObj = Object.freeze(DefaultObj);
-// FreezedObj.name = 'Error';
-
-// Class Example
-// const Instance = new DefaultClass();
-// const FreezedInstance = Object.freeze(Instance);
+const Instance = new DefaultClass();
+const FreezedInstance = Object.freeze(Instance);
 // FreezedInstance.name = 'Error';

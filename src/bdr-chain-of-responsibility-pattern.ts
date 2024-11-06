@@ -1,3 +1,10 @@
+// Behaviour Design Pattern of Chain Responsibility
+/*
+Definition
+
+The Chain of Responsibility passes requests along a chain of handlers. Each handler decides either to process the request or to pass it to the next handler in the chain.
+
+*/
 interface Logger {
     setNext(logger: Logger): Logger; // Set the next logger in the chain
     log(level: string, message: string): void; // Handle the log message
@@ -60,7 +67,7 @@ class ErrorLogger implements Logger {
 
 // Chain of Responsibility
 // Client code
-function main() {
+function mainCOR() {
     const infoLogger = new InfoLogger();
     const warningLogger = new WarningLogger();
     const errorLogger = new ErrorLogger();
@@ -75,4 +82,4 @@ function main() {
     infoLogger.log("debug", "This is a debug message (not handled).");
 }
 
-main();
+mainCOR();

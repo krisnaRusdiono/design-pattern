@@ -1,4 +1,11 @@
-// Structural Design Facade Pattern
+// Structural Design Pattern of Facade
+/*
+Definition
+
+The Facade pattern provides a simplified interface to a library, a framework, or any other complex set of classes.
+*/
+
+// Create breakdown class
 class CPU {
     start(): void {
         console.log("CPU started.");

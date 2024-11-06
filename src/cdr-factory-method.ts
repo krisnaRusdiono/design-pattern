@@ -1,5 +1,11 @@
-// Creation Design Pattern Factory Method
-// Example of Object
+// Creation Design Pattern of Factory Method
+/*
+Definition
+
+The Factory method pattern provides an interface for creating objects that can be modified after creation.
+*/
+
+// Example of Factory Method on Object
 const ObjConstructor = (name: string) => ({
     name,
     greet: () => {
@@ -7,11 +13,11 @@ const ObjConstructor = (name: string) => ({
     },
 })
 
-// const MyObj = ObjConstructor('John');
-// MyObj.greet();
+const MyObj = ObjConstructor('John');
+MyObj.greet();
 
 // ===============================================================================
-// Example of Class
+// Example of Factory Method on Class
 interface Animal {
     makeSound(): void;
 }
@@ -44,9 +50,9 @@ class CatFactory extends AnimalFactory {
     }
 }
 
-// const dogFactory = new DogFactory();
-// const catFactory = new CatFactory();
-// const dog = dogFactory.createAnimal();
-// const cat = catFactory.createAnimal();
-// dog.makeSound();
-// cat.makeSound();
+const dogFactory = new DogFactory();
+const catFactory = new CatFactory();
+const dog = dogFactory.createAnimal();
+const cat = catFactory.createAnimal();
+dog.makeSound();
+cat.makeSound();

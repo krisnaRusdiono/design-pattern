@@ -1,4 +1,11 @@
-// Creation Design Pattern Factory Method
+// Creation Design Pattern of Abstract Factory
+/*
+Definition
+
+The Abstract Factory pattern allows us to produce families of related objects without specifying concrete classes. It's useful in situations where we need to create objects that share only some properties and methods.
+*/
+
+// Example of Abstract Factory on Class
 // Define base interface
 interface Circle {
     draw(): void;
@@ -62,20 +69,24 @@ class BlueShapeFactory implements ShapeFactory {
 
 // Usage
 // Client code
-function drawShapes(factory: ShapeFactory) {
-    const circle = factory.createCircle();
-    const square = factory.createSquare();
+function main() {
+    function drawShapes(factory: ShapeFactory) {
+        const circle = factory.createCircle();
+        const square = factory.createSquare();
 
-    circle.draw();
-    square.draw();
+        circle.draw();
+        square.draw();
+    }
+
+    // Using the Red Shape Factory
+    const redFactory = new RedShapeFactory();
+    console.log("Using Red Shape Factory:");
+    drawShapes(redFactory);
+
+    // Using the Blue Shape Factory
+    const blueFactory = new BlueShapeFactory();
+    console.log("Using Blue Shape Factory:");
+    drawShapes(blueFactory);
 }
 
-// Using the Red Shape Factory
-const redFactory = new RedShapeFactory();
-console.log("Using Red Shape Factory:");
-drawShapes(redFactory);
-
-// Using the Blue Shape Factory
-const blueFactory = new BlueShapeFactory();
-console.log("Using Blue Shape Factory:");
-drawShapes(blueFactory);
+main();

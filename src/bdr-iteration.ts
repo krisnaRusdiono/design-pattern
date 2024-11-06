@@ -1,3 +1,12 @@
+// Behavioural Design Pattern of Iterator
+/*
+Definition
+
+The Iterator Pattern provides a way to access elements of a collection sequentially without exposing the underlying representation of the collection. This pattern is useful for traversing complex data structures like lists, trees, or arrays.
+
+*/
+
+
 class Book {
     constructor(public title: string, public author: string) {}
 }

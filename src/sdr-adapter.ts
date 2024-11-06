@@ -1,4 +1,10 @@
-// Structural Design Adapter Pattern
+// Structural Design Pattern of Adapter Pattern
+/*
+Definition
+
+The Adapter Pattern allows two objects with incompatible interfaces to interact with each other.
+*/
+
 // Define interface
 interface Printer {
     print(text: string): void;

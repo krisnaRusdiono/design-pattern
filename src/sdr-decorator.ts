@@ -1,4 +1,9 @@
-// Structural Design Decorator Pattern
+// Structural Design Pattern of Decorator
+/*
+Definition
+
+The Decorator pattern lets you attach new behaviors to objects by placing them inside wrapper objects that contain the behaviors. If you're somewhat familiar with React and higher order components (HOC) this kind of approach probably rings a bell for you.
+*/
 
 // Create Base Class
 class Coffee {
